@@ -1,0 +1,54 @@
+Iteration 1 :
+S -> operand A
+A -> and S | or S | xor S | iff S | Kosong
+S -> if S then S
+S -> not S
+S -> ( S ) A
+S -> 2 S
+B -> 3 S
+B -> 4 S
+B -> 5 S
+S -> 6 S 7 S
+S -> 6 S 7 S Pop atau Pop saja?
+B -> 8 S
+S -> 9 S 10 B atau 9 S 10 B Pop
+S -> 9 S 10 B Pop
+B -> Lambda
+
+Iteration 2 :
+S -> A | C | D | E
+A -> operand B | operand
+B -> and S | or S | xor S | iff S | Kosong
+C -> if S then S
+D -> not S
+E -> ( S )
+F -> Balancing + B
+
+Iteration 3 :
+S -> A | C | D | E
+A -> operand B
+B -> and S | or S | xor S | iff S | Kosong
+C -> if S then S
+D -> not S
+E -> ( S )
+F -> Balancing + B
+
+Iteration 4 :
+S -> A | C | D | E
+A -> operand B
+B -> and S | or S | xor S | iff S | Kosong
+C -> if S then S
+D -> not S
+E -> ( S )
+F -> Balancing + B
+
+Iteration 5 :
+S -> operand A
+A -> and S | or S | xor S | iff S | Kosong
+S -> if S then S
+S -> not S
+S -> ( S ) A
+
+Iteration 6 / Final :
+S -> operand A | if S then S | not S | ( S ) A
+A -> and S | or S | xor S | iff S | Kosong
